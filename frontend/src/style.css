@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    @apply bg-crush-milk text-slate-800 antialiased;
+    font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      'Noto Sans', 'Liberation Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-crush-gradient {
+    background-image:
+      radial-gradient(800px 500px at 10% 10%, rgba(255, 126, 182, 0.35), transparent 55%),
+      radial-gradient(900px 600px at 90% 10%, rgba(184, 167, 255, 0.35), transparent 55%),
+      radial-gradient(900px 700px at 50% 100%, rgba(255, 77, 141, 0.12), transparent 60%),
+      linear-gradient(180deg, #fff7fb 0%, #ffffff 55%, #fff7fb 100%);
+  }
+}
+
