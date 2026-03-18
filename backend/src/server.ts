@@ -31,9 +31,11 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
   return internal(res)
 })
 
-const server = app.listen(env.port, () => {
-  console.log(`get-in4 backend listening on http://localhost:${env.port}`)
-})
+const PORT = process.env.PORT || env.port || 4000;
+
+const server = app.listen(PORT, () => {
+  console.log(`get-in4 backend listening on port ${PORT}`);
+});
 
 async function shutdown(signal: string) {
   console.log(`\nShutting down (${signal})...`)
